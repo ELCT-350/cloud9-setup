@@ -25,7 +25,7 @@ https://console.aws.amazon.com/console/home?region=us-east-1
 - Cloud 9 will take some time to initialize. When it’s done, bookmark the page. The URL will look like:
 https://console.aws.amazon.com/cloud9/ide/...
 
-### Step 3. Setup SSH Key on Cloud9
+## Step 3. Setup SSH Key on Cloud9
 
 - In the Cloud9 IDE, open a terminal window by going to menu item Window > New Terminal
 - Make a new ssh key by entering the following command into the terminal:
@@ -33,12 +33,16 @@ https://console.aws.amazon.com/cloud9/ide/...
 - When prompted, name the key "cloud9key" and enter a passphrase of your choosing. Remember the passphrase. It cannot be recovered.
 - Open the newly created cloud9key.pub in the file explorer on the left by double clicking it. Keep Cloud9 open. You will need the contents of this file in the next step.
 
-### Step 4. Add SSH Key to your GitHub account
+## Step 4. Add SSH Key to your GitHub account
 
 - Back in Cloud9, copy the contents of the cloud9key.pub to the clipboard. It should start with "ssh-rsa ..."
 - Log into your GitHub account, go to settings, and go to SSH and GPG Keys on the left panel
 - Add a new key. The name of the key should be "cloud9key". Paste the contents of the cloud9key.pub file into the box.
 
-### Step 5. Clone this Repo to Cloud9
+## Step 5. Clone this Repo to Cloud9
+
+## Step 6. Install CMake to Cloud9
+
+## Step 7. Build and Run the Test Program
 
 
