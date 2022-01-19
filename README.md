@@ -25,25 +25,40 @@ https://console.aws.amazon.com/console/home?region=us-east-1
 - Cloud 9 will take some time to initialize. When it’s done, bookmark the page. The URL will look like:
 https://console.aws.amazon.com/cloud9/ide/...
 
-## Step 3. Setup SSH Key on Cloud9
+## Step 3. Install Cmake to Cloud9
+
+- Find your bash terminal the Cloud IDE (should be at the bottom, and is a window in a tab that starts with "bash ~ ip-..."). If you don't see it, go to Window > New Terminal and open open.
+- Run the following command in the terminal:
+```sudo yum install cmake3```
+- When asked to confirm the downland, reply with "y"
+- It is complete when you see "Complete!" in the terminal
+
+## Step 3. Create SSH Key on Cloud9
 
 - In the Cloud9 IDE, open a terminal window by going to menu item Window > New Terminal
 - Make a new ssh key by entering the following command into the terminal:
 ```ssh-keygen -t rsa```
-- When prompted, name the key "cloud9key" and enter a passphrase of your choosing. Remember the passphrase. It cannot be recovered.
-- Open the newly created cloud9key.pub in the file explorer on the left by double clicking it. Keep Cloud9 open. You will need the contents of this file in the next step.
+- DO NOT ADD A FILENAME OR A PASSWORD. Simply press Enter at the prompts.
+- Get the contents of the public key file with the terminal command:
+```cat /home/ec2-user/.ssh/id_rsa.pub```
+- Copy the contents of the file from the terminal to yout clipboard of a text file. The key starts with "ssh-rsa ...".
 
-## Step 4. Add SSH Key to your GitHub account
+## Step 4. Add SSH Key to GitHub
 
-- Back in Cloud9, copy the contents of the cloud9key.pub to the clipboard. It should start with "ssh-rsa ..."
-- Log into your GitHub account, go to settings, and go to SSH and GPG Keys on the left panel
-- Add a new key. The name of the key should be "cloud9key". Paste the contents of the cloud9key.pub file into the box.
+- Log into your GitHub account, go to Settings, and go to "SSH and GPG Keys" on the left panel
+- Click the green "New SSH Key" to add a new key. Put "aws" as the title, and paste the contents of the id_rsa.pub file into the box you got from step 3 above.
 
 ## Step 5. Clone this Repo to Cloud9
 
-## Step 6. Install CMake to Cloud9
+- Add your username to git by running the command in terminal with your GitHub username:
+````git config --global user.name YOUR_USER_NAME_HERE```
+- Clone this repository by running the command in terminal:
+```git clone git@github.com:ELCT-350/cloud9-setup.git```
 
-## Step 7. Build and Run the Test Program
+## Step 7. Build and Run the HelloCloud9 Program
+
+- Navigate to the repository in the file explorer on the left and open the file "hello.cpp" by double clicking
+- 
 
 
 
