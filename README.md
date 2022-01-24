@@ -58,7 +58,7 @@ https://console.aws.amazon.com/cloud9/ide/...
 ## Step 7. Build and Run the HelloCloud9 Program
 
 - Navigate to the cloud9-setup/hello folder in the file explorer on the left and open the file "run.sh" by double clicking it.
-- Click the "Run" button above the editor to run the script. You should see "HELLO CLOUD9" appear in the console.
+- Click the "Run" button above the editor to run the script. You should see "HELLO ELCT350" appear in the console.
 
 
 
