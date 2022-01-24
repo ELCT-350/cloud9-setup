@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    cout << endl << "HELLO CLOUD9!" << endl;
+    cout << endl << "HELLO ELCT350!" << endl;
     return 0;
 }
